@@ -1,0 +1,164 @@
+html, body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+body{
+    background-image: url("../images/background.png"), linear-gradient(180deg, rgb(255, 255, 255), rgb(230, 230, 230));
+}
+
+.coluna{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu{
+    height: 8%;
+    width: 100%;
+    margin: 5em;
+    background-color: rgb(233,233,233);
+    border-radius: 1em;
+    display: flex;
+    flex-flow: column;
+    padding: 1em;
+}
+
+.buttons button:nth-child(odd){
+    margin-right: 0.5em;
+}
+
+#menu button{
+    width: 100%;
+    border: none;
+    font-size: 1.25em;
+    padding: 1em;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    flex-flow: row;
+}
+
+#menu button:hover{
+    cursor: pointer;
+    background-color: #cacaca;
+    transition-duration: 0.3s;
+}
+
+#menu button:focus{
+    outline: 0;
+}
+
+#menu button:active{
+    outline: 0;
+    background-color: #92929292;
+    transition-duration: 0.3;
+}
+
+#menu h1 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    font-size: 2.5em;
+    margin: 0.5em;
+}
+
+#menu p{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: left;
+    font-size: nomral;
+    margin: 0.5em 0 0.5em 1em;
+}
+
+#log {
+    overflow: scroll;
+    overflow-x: hidden;
+    padding: 0.5em 0 0.5em 0;
+    width: 100%;
+    margin: 1em 0 1em 0;
+    height: 75%;
+    background-color: white;
+}
+
+#tabuleiro{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu, .pecas {
+    box-shadow: 0 0 1em 0.25em rgba(121, 121, 121, 0.75);
+}
+
+.pecas {
+    width: 90%;
+    height: 90%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1em;
+    border: rgb(221, 221, 221) 0.65em solid;
+}
+
+.linhaPeca {
+    width: 100%;
+    display: flex;
+}
+
+.linhaPeca:nth-child(odd) .peca:nth-child(odd) {
+    background-color: #EDEDED;
+}
+
+.linhaPeca:nth-child(even) .peca:nth-child(even) {
+    background-color: #EDEDED;
+}
+
+.linhaPeca:nth-child(even) .peca:nth-child(odd) {
+    background-color: #383838;
+}
+
+.linhaPeca:nth-child(odd) .peca:nth-child(even) {
+    background-color: #383838;
+}
+
+.linhaPeca, .peca {
+    flex: 0.5;
+}
+
+.white:hover {
+    cursor: pointer;
+}
+
+.peca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.linhaPeca:first-child .peca:first-child {
+    border-radius: 0.5em 0 0 0;
+}
+
+.linhaPeca:first-child .peca:last-child {
+    border-radius: 0 0.5em 0 0;
+}
+
+.linhaPeca:last-child .peca:first-child {
+    border-radius: 0 0 0 0.5em;
+}
+
+.linhaPeca:last-child .peca:last-child {
+    border-radius: 0 0 0.5em 0;
+}
